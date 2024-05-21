@@ -17,6 +17,8 @@ if __name__ == "__main__":
     ][0]
     print(default_experiment)
 
+    print("=" * 20)
+
     # 4. Create experiments
     experiment_name = "Apple_Models"
 
@@ -42,3 +44,10 @@ if __name__ == "__main__":
     produce_apples_experiment = client.create_experiment(
         name=experiment_name, tags=experiment_tags
     )
+
+    # 5. Searching based on tags
+    apples_experiment = client.search_experiments(
+        filter_string="tags.project_name = 'grocery-forecasting' AND tags.store_dept = 'produce'"
+    )
+    pprint(apples_experiment[0])
+    print("=" * 20)
