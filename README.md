@@ -41,3 +41,20 @@
     ):
         ...
   ```
+
+## Creating Experiments
+### Tags vs Experiments
+#### Unique Experiment
+- Enhanced Organization: 각 Experiment를 독립함으로써 보다 수월하게 관리할 수 있다.
+- Metadata Annotation: Metadata는 Experiment 단위로 관리된다.
+- Experiments는 Input Dataset에 따라 구분한다.
+#### Tag
+- Experiments를 그룹으로 관리할 필요가 있을 때 Tag를 사용한다.
+#### Example
+![alt text](docs/experiments-overview.png)
+
+- Project: 각 상품별 수요 예측
+- Tag: 식자재 체인점의 각 지점(Produce, Dairy)
+- Experiments: 각 상품
+- Runs: 상품에 대한 테스트
+
